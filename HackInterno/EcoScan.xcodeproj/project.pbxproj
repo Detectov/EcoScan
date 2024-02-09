@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D0DD6D12B7560FD00EFEC35 /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0DD6D02B7560FD00EFEC35 /* BarcodeView.swift */; };
+		9D0DD6D42B75A2DA00EFEC35 /* Manjari-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D0DD6D32B75A2DA00EFEC35 /* Manjari-Regular.ttf */; };
+		9D1258112B7479FF00664FD2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1258102B7479FF00664FD2 /* GoogleSignIn */; };
+		9D1258132B7479FF00664FD2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1258122B7479FF00664FD2 /* GoogleSignInSwift */; };
+		9D1258162B747A6600664FD2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1258152B747A6600664FD2 /* FirebaseAuth */; };
 		9D83D1662B7162820074743F /* HackInternoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83D1652B7162820074743F /* HackInternoApp.swift */; };
 		9D83D16A2B7162840074743F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D83D1692B7162840074743F /* Assets.xcassets */; };
 		9D83D16E2B7162840074743F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D83D16D2B7162840074743F /* Preview Assets.xcassets */; };
@@ -34,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D0DD6D02B7560FD00EFEC35 /* BarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
+		9D0DD6D32B75A2DA00EFEC35 /* Manjari-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manjari-Regular.ttf"; sourceTree = "<group>"; };
+		9D0DD6D52B75A30100EFEC35 /* EcoScan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EcoScan-Info.plist"; sourceTree = "<group>"; };
 		9D83D1622B7162820074743F /* EcoScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D83D1652B7162820074743F /* HackInternoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackInternoApp.swift; sourceTree = "<group>"; };
 		9D83D1692B7162840074743F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1258112B7479FF00664FD2 /* GoogleSignIn in Frameworks */,
+				9D1258162B747A6600664FD2 /* FirebaseAuth in Frameworks */,
+				9D1258132B7479FF00664FD2 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,9 +83,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D0DD6D22B75A29B00EFEC35 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9D0DD6D32B75A2DA00EFEC35 /* Manjari-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		9D83D1592B7162820074743F = {
 			isa = PBXGroup;
 			children = (
+				9D0DD6D52B75A30100EFEC35 /* EcoScan-Info.plist */,
 				9D83D1642B7162820074743F /* HackInterno */,
 				9D83D1762B7162840074743F /* HackInternoTests */,
 				9D83D1802B7162840074743F /* HackInternoUITests */,
@@ -95,9 +115,11 @@
 		9D83D1642B7162820074743F /* HackInterno */ = {
 			isa = PBXGroup;
 			children = (
+				9D0DD6D22B75A29B00EFEC35 /* Font */,
 				9D83D1652B7162820074743F /* HackInternoApp.swift */,
 				9D83D1692B7162840074743F /* Assets.xcassets */,
 				9D83D1902B7163B00074743F /* StartView.swift */,
+				9D0DD6D02B7560FD00EFEC35 /* BarcodeView.swift */,
 				9D83D16B2B7162840074743F /* HackInterno.entitlements */,
 				9D83D16C2B7162840074743F /* Preview Content */,
 			);
@@ -145,6 +167,11 @@
 			dependencies = (
 			);
 			name = EcoScan;
+			packageProductDependencies = (
+				9D1258102B7479FF00664FD2 /* GoogleSignIn */,
+				9D1258122B7479FF00664FD2 /* GoogleSignInSwift */,
+				9D1258152B747A6600664FD2 /* FirebaseAuth */,
+			);
 			productName = HackInterno;
 			productReference = 9D83D1622B7162820074743F /* EcoScan.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +244,10 @@
 				Base,
 			);
 			mainGroup = 9D83D1592B7162820074743F;
+			packageReferences = (
+				9D12580F2B7479FF00664FD2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				9D1258142B747A6600664FD2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9D83D1632B7162820074743F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D83D16E2B7162840074743F /* Preview Assets.xcassets in Resources */,
+				9D0DD6D42B75A2DA00EFEC35 /* Manjari-Regular.ttf in Resources */,
 				9D83D16A2B7162840074743F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +293,7 @@
 			files = (
 				9D83D1662B7162820074743F /* HackInternoApp.swift in Sources */,
 				9D83D1912B7163B00074743F /* StartView.swift in Sources */,
+				9D0DD6D12B7560FD00EFEC35 /* BarcodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +457,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EcoScan-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -462,6 +496,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EcoScan-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -617,6 +652,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D12580F2B7479FF00664FD2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		9D1258142B747A6600664FD2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D1258102B7479FF00664FD2 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D12580F2B7479FF00664FD2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		9D1258122B7479FF00664FD2 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D12580F2B7479FF00664FD2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		9D1258152B747A6600664FD2 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D1258142B747A6600664FD2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D83D15A2B7162820074743F /* Project object */;
 }
