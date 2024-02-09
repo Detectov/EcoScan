@@ -16,6 +16,7 @@ struct StartView: View {
                 VStack{
                     Spacer()
                     Spacer()
+                    Spacer()
                     HStack{
                         Text ("ESCANEA")
                             .foregroundColor(Color("gtext"))
@@ -40,27 +41,20 @@ struct StartView: View {
                             .font(.headline)
                             .foregroundColor(.white)
                             .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color("gtext"))
+                            .background(Color("navLink"))
                             .cornerRadius(10)
-                            .padding()
+                            
                     }
+                    .padding(.leading, -100)
+                    .frame(width: 250)
+                    .padding(.bottom, 200)
                     Spacer()
                     Spacer()
-                        
-                        
-                        
-                    }
-                    
-                    
-                    
-                    
-                    
                 }
-                
             }
         }
-        
     }
+}
+
 
 

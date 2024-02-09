@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BarcodeView: View {
+    var page : Page
     var body: some View {
         NavigationView {
             ZStack {
@@ -17,21 +18,21 @@ struct BarcodeView: View {
                     Spacer()
                     Spacer()
                     Spacer()
-                    
-                    Text("Transparencia en\ncada etiqueta!")
+                    //LottieView()
+                        //.frame(width: 250, height: 250, alignment: .center)
+                    Text(page)
                         .foregroundColor(.white)
                         .font(.custom("Manjari-Regular",size: 40))
                         .frame(maxWidth: .infinity, alignment: .center)
                         .multilineTextAlignment(.center)
                         .padding()
-                    Spacer()
                     
-                    Text("CONOCE LA SUSTENTABILIDAD DE TUS\nPRODUCTOS FAVORITOS Y APRENDE SOBRE\nSUS ALTERNATIVAS")
+                    Text("")
                         .foregroundColor(.white)
                         .font(.system(size:16))
                         .frame(maxWidth: .infinity, alignment: .center)
                         .multilineTextAlignment(.center)
-                        .padding()
+                        .padding(.bottom, 150)
                     Spacer()
                     Spacer()
                    
@@ -42,14 +43,10 @@ struct BarcodeView: View {
             }
         }
     }
-    /*
-    init(){
-        for familyName in UIFont.familyNames{
-            print(familyName)
-            for fontName in UIFont.fontNames(forFamilyName:familyName){
-                print("--\(fontName)")
-            }
-        }
-    }*/
 }
-
+struct BarcodeView_Previews: PreviewProvider{
+    static var previews: some View{
+        BarcodeView(page: Page.slidePages)
+    }
+}
+    
