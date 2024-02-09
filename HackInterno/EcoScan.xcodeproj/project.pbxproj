@@ -13,6 +13,7 @@
 		9D1258112B7479FF00664FD2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1258102B7479FF00664FD2 /* GoogleSignIn */; };
 		9D1258132B7479FF00664FD2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1258122B7479FF00664FD2 /* GoogleSignInSwift */; };
 		9D1258162B747A6600664FD2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1258152B747A6600664FD2 /* FirebaseAuth */; };
+		9D6E6DEE2B769F0D001D290C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E6DED2B769F0D001D290C /* LoginView.swift */; };
 		9D83D1662B7162820074743F /* HackInternoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83D1652B7162820074743F /* HackInternoApp.swift */; };
 		9D83D16A2B7162840074743F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D83D1692B7162840074743F /* Assets.xcassets */; };
 		9D83D16E2B7162840074743F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D83D16D2B7162840074743F /* Preview Assets.xcassets */; };
@@ -22,8 +23,7 @@
 		9D83D1912B7163B00074743F /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83D1902B7163B00074743F /* StartView.swift */; };
 		9DA305852B75DF7B0075EDA9 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA305842B75DF7B0075EDA9 /* LottieView.swift */; };
 		9DA305892B75E56E0075EDA9 /* Barcode.json in Resources */ = {isa = PBXBuildFile; fileRef = 9DA305882B75E56E0075EDA9 /* Barcode.json */; };
-		9DA3058C2B75E8540075EDA9 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3058B2B75E8540075EDA9 /* PageModel.swift */; };
-		9DA3058E2B75EF7D0075EDA9 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3058D2B75EF7D0075EDA9 /* PageView.swift */; };
+		9DA305922B7687090075EDA9 /* barcode.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 9DA305912B7687090075EDA9 /* barcode.lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +47,7 @@
 		9D0DD6D02B7560FD00EFEC35 /* BarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
 		9D0DD6D32B75A2DA00EFEC35 /* Manjari-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manjari-Regular.ttf"; sourceTree = "<group>"; };
 		9D0DD6D52B75A30100EFEC35 /* EcoScan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EcoScan-Info.plist"; sourceTree = "<group>"; };
+		9D6E6DED2B769F0D001D290C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9D83D1622B7162820074743F /* EcoScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D83D1652B7162820074743F /* HackInternoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackInternoApp.swift; sourceTree = "<group>"; };
 		9D83D1692B7162840074743F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,8 +61,7 @@
 		9D83D1902B7163B00074743F /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		9DA305842B75DF7B0075EDA9 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		9DA305882B75E56E0075EDA9 /* Barcode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Barcode.json; sourceTree = "<group>"; };
-		9DA3058B2B75E8540075EDA9 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
-		9DA3058D2B75EF7D0075EDA9 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		9DA305912B7687090075EDA9 /* barcode.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = barcode.lottie; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,13 +128,13 @@
 				9D0DD6D22B75A29B00EFEC35 /* Font */,
 				9D83D1652B7162820074743F /* HackInternoApp.swift */,
 				9DA305882B75E56E0075EDA9 /* Barcode.json */,
-				9DA3058B2B75E8540075EDA9 /* PageModel.swift */,
 				9D83D1692B7162840074743F /* Assets.xcassets */,
+				9DA305912B7687090075EDA9 /* barcode.lottie */,
+				9D6E6DED2B769F0D001D290C /* LoginView.swift */,
 				9D83D1902B7163B00074743F /* StartView.swift */,
 				9D0DD6D02B7560FD00EFEC35 /* BarcodeView.swift */,
 				9D83D16B2B7162840074743F /* HackInterno.entitlements */,
 				9D83D16C2B7162840074743F /* Preview Content */,
-				9DA3058D2B75EF7D0075EDA9 /* PageView.swift */,
 			);
 			path = HackInterno;
 			sourceTree = "<group>";
@@ -280,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA305922B7687090075EDA9 /* barcode.lottie in Resources */,
 				9DA305892B75E56E0075EDA9 /* Barcode.json in Resources */,
 				9D83D16E2B7162840074743F /* Preview Assets.xcassets in Resources */,
 				9D0DD6D42B75A2DA00EFEC35 /* Manjari-Regular.ttf in Resources */,
@@ -309,10 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D83D1662B7162820074743F /* HackInternoApp.swift in Sources */,
-				9DA3058E2B75EF7D0075EDA9 /* PageView.swift in Sources */,
-				9DA3058C2B75E8540075EDA9 /* PageModel.swift in Sources */,
 				9D83D1912B7163B00074743F /* StartView.swift in Sources */,
 				9D0DD6D12B7560FD00EFEC35 /* BarcodeView.swift in Sources */,
+				9D6E6DEE2B769F0D001D290C /* LoginView.swift in Sources */,
 				9DA305852B75DF7B0075EDA9 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

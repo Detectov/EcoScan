@@ -7,8 +7,23 @@
 
 import SwiftUI
 
+struct OnBoardingStep{
+    let animation: String
+    let title: String
+    let description: String
+}
+
+private let onBoardingSteps = [
+    OnBoardingStep(animation: "a", title: "Transparencia en\ncada etiqueta!", description: "CONOCE LA SUSTENTABILIDAD DE TUS\nPRODUCTOS FAVORITOS Y APRENDE SOBRE\nSUS ALTERNATIVAS."),
+    OnBoardingStep(animation: "b", title: "Convierte tus\nelecciones en\nbenefeficios", description: "ACUMULA PUNTOS Y DESBLOQUEA\nRECOMPENSAS ECO-AMIGABLES DISEÑADAS\nPARA CELEBRAR TU COMPROMISO POR UN\nESTILO DE VIDA MAS CONSCIENTE."),
+    OnBoardingStep(animation: "c", title: "Descubre el poder\nde las palabras en\nnuestro chat", description: "INTERCAMBIA OPINIONES SOBRE\nPRODUCTOS, COMPARTE CONSEJOS Y EXPON TUS DUDAS SOBRE SUSTENTABILIDAD DENTRO DE UNA COMUNIDAD ECO-CONSCIENTE.")
+]
 struct BarcodeView: View {
-    var page : Page
+    @State private var currentStep = 0
+    
+    init (){
+        UIScrollView.appearance().bounces = false
+    }
     var body: some View {
         NavigationView {
             ZStack {
@@ -16,37 +31,77 @@ struct BarcodeView: View {
                     .ignoresSafeArea()
                 VStack{
                     Spacer()
-                    Spacer()
-                    Spacer()
-                    //LottieView()
-                        //.frame(width: 250, height: 250, alignment: .center)
-                    Text(page)
-                        .foregroundColor(.white)
-                        .font(.custom("Manjari-Regular",size: 40))
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .multilineTextAlignment(.center)
-                        .padding()
+                    TabView(selection: $currentStep){
+                        ForEach(0..<onBoardingSteps.count) { it in
+                            VStack{
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                                LottieView(url: Bundle.main.url(forResource: "barcode", withExtension: "lottie")!)
+                                    .frame(width: 370, height: 238, alignment: .center)
+                                Text(onBoardingSteps[it].title)
+                                    .foregroundColor(.white)
+                                    .font(.custom("Manjari-Regular",size: 40))
+                                    .frame(width: 397, height: 126, alignment: .center)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.top, 150)
+                                
+                                Text(onBoardingSteps[it].description)
+                                    .foregroundColor(.white)
+                                    .font(.system(size:16))
+                                    .frame(width: 344, height: 100, alignment: .center)
+                                    .multilineTextAlignment(.center)
+                                    .padding(.bottom, 100)
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                            }
+                            .tag(it)
+                        }
+                    }
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                    HStack{
+                        ForEach(0..<onBoardingSteps.count){ it in
+                            if it == currentStep{
+                                Rectangle()
+                                    .frame(width: 20, height: 10)
+                                    .cornerRadius(10)
+                                    .foregroundColor(.white)
+                            } else{
+                                Circle()
+                                    .frame(width: 10, height: 10)
+                                    .foregroundColor(Color("graybutton"))
+                                
+                            }
+                        }
+                    }
+                    .padding(.bottom, 24)
                     
-                    Text("")
-                        .foregroundColor(.white)
-                        .font(.system(size:16))
-                        .frame(maxWidth: .infinity, alignment: .center)
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom, 150)
-                    Spacer()
-                    Spacer()
-                   
+                    //Button(action:{
+                        //if self.currentStep < onBoardingSteps.count - 1{
+                            //self.currentStep += 1
+                        //} else {
+                            //NavigationLink(destination: LoginView())
+                        //}
+                    //})
                     
-                    
-                    
+                    VStack{
+                        HStack{
+                            Spacer()
+                            Button(action:{
+                                self.currentStep = onBoardingSteps.count - 1
+                            }){
+                                Text("Skip")
+                                    .padding(.bottom, 20)
+                                    .frame(maxWidth: .infinity, alignment: .center)
+                                    .foregroundColor(.white)
+                            }
+                        }
+                    }
                 }
             }
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
-struct BarcodeView_Previews: PreviewProvider{
-    static var previews: some View{
-        BarcodeView(page: Page.slidePages)
-    }
-}
-    

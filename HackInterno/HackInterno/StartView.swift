@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StartView: View {
+    
     var body: some View {
         NavigationView{
             ZStack{
@@ -43,6 +44,7 @@ struct StartView: View {
                             .padding()
                             .background(Color("navLink"))
                             .cornerRadius(10)
+                            .navigationBarBackButtonHidden(true)
                             
                     }
                     .padding(.leading, -100)
