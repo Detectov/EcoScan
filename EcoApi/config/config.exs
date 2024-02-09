@@ -11,6 +11,11 @@ config :eco_api,
   ecto_repos: [EcoApi.Repo],
   generators: [timestamp_type: :utc_datetime, binary_id: true]
 
+config :eco_api, EcoApi.Guardian,
+  issuer: "eco_api",
+  secret_key: "yStGe4AkKCnLc+o0S8S8vidRXHRd/LkXoqUIgnaE0r5O3EkPy/UazHA+IioYPcNz",
+  module: EcoApi.Guardian
+
 # Configures the endpoint
 config :eco_api, EcoApiWeb.Endpoint,
   url: [host: "localhost"],

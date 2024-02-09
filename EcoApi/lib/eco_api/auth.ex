@@ -89,6 +89,10 @@ defmodule EcoApi.Auth do
     Repo.delete(user)
   end
 
+  def get_user_by_email(email) do
+    Repo.get_by(User, email: email)
+  end
+
   @doc """
   Returns an `%Ecto.Changeset{}` for tracking user changes.
 
@@ -106,5 +110,22 @@ defmodule EcoApi.Auth do
     %User{}
     |> User.changeset(attrs)
     |> Repo.insert()
+  end
+
+  def authenticate_user(email, plaintext_password) do
+    user = get_user_by_email(email)
+
+    case user do
+      nil ->
+        {:error, :user_not_found}
+
+      %User{} = user ->
+        # Asegúrate de utilizar Bcrypt.verify_pass/2 aquí
+        if Bcrypt.verify_pass(plaintext_password, user.password_hash) do
+          {:ok, user}
+        else
+          {:error, :invalid_credentials}
+        end
+    end
   end
 end
