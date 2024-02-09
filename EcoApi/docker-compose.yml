@@ -1,0 +1,31 @@
+version: "3.11"
+
+services:
+  eco-api-db:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: eco_api_dev
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+
+  eco-api:
+    build: .
+    depends_on:
+      - eco-api-db
+    environment:
+      MIX_ENV: dev
+      DB_HOST: eco-api-db
+      DB_NAME: eco_api_dev
+      DB_USER: admin
+      DB_PASS: admin
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+
+volumes:
+  postgres_data:
