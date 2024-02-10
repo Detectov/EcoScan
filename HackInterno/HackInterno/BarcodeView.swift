@@ -16,7 +16,7 @@ struct OnBoardingStep{
 private let onBoardingSteps = [
     OnBoardingStep(animation: "a", title: "Transparencia en\ncada etiqueta!", description: "CONOCE LA SUSTENTABILIDAD DE TUS\nPRODUCTOS FAVORITOS Y APRENDE SOBRE\nSUS ALTERNATIVAS."),
     OnBoardingStep(animation: "b", title: "Convierte tus\nelecciones en\nbenefeficios", description: "ACUMULA PUNTOS Y DESBLOQUEA\nRECOMPENSAS ECO-AMIGABLES DISEÑADAS\nPARA CELEBRAR TU COMPROMISO POR UN\nESTILO DE VIDA MAS CONSCIENTE."),
-    OnBoardingStep(animation: "c", title: "Descubre el poder\nde las palabras en\nnuestro chat", description: "INTERCAMBIA OPINIONES SOBRE\nPRODUCTOS, COMPARTE CONSEJOS Y EXPON TUS DUDAS SOBRE SUSTENTABILIDAD DENTRO DE UNA COMUNIDAD ECO-CONSCIENTE.")
+    //OnBoardingStep(animation: "c", title: "Descubre el poder\nde las palabras en\nnuestro chat", description: "INTERCAMBIA OPINIONES SOBRE\nPRODUCTOS, COMPARTE CONSEJOS Y EXPON TUS DUDAS SOBRE SUSTENTABILIDAD DENTRO DE UNA COMUNIDAD ECO-CONSCIENTE.")
 ]
 struct BarcodeView: View {
     @State private var currentStep = 0
@@ -34,28 +34,23 @@ struct BarcodeView: View {
                     TabView(selection: $currentStep){
                         ForEach(0..<onBoardingSteps.count) { it in
                             VStack{
-                                Spacer()
-                                Spacer()
-                                Spacer()
                                 LottieView(url: Bundle.main.url(forResource: "barcode", withExtension: "lottie")!)
                                     .frame(width: 370, height: 238, alignment: .center)
+                                    .padding(.top, 100)
                                 Text(onBoardingSteps[it].title)
                                     .foregroundColor(.white)
-                                    .font(.custom("Manjari-Regular",size: 40))
+                                    .font(.custom("Manjari-Bold",size: 40))
                                     .frame(width: 397, height: 126, alignment: .center)
                                     .multilineTextAlignment(.center)
                                     .padding(.top, 150)
                                 
                                 Text(onBoardingSteps[it].description)
                                     .foregroundColor(.white)
-                                    .font(.system(size:16))
+                                    .font(.system(size:14))
                                     .frame(width: 344, height: 100, alignment: .center)
                                     .multilineTextAlignment(.center)
                                     .padding(.bottom, 100)
-                                Spacer()
-                                Spacer()
-                                Spacer()
-                                Spacer()
+                                
                             }
                             .tag(it)
                         }
@@ -78,19 +73,20 @@ struct BarcodeView: View {
                     }
                     .padding(.bottom, 24)
                     
-                    //Button(action:{
+                    //Button(<#LocalizedStringKey#>, action:{
                         //if self.currentStep < onBoardingSteps.count - 1{
-                            //self.currentStep += 1
+                          //  self.currentStep += 1
                         //} else {
+                          //  print("u")
                             //NavigationLink(destination: LoginView())
                         //}
                     //})
                     
                     VStack{
                         HStack{
-                            Spacer()
                             Button(action:{
                                 self.currentStep = onBoardingSteps.count - 1
+                                  
                             }){
                                 Text("Skip")
                                     .padding(.bottom, 20)

@@ -20,26 +20,31 @@ struct StartView: View {
                     Spacer()
                     HStack{
                         Text ("ESCANEA")
-                            .foregroundColor(Color("gtext"))
+                            .foregroundColor(Color("btext"))
                         Text("UN")
                             .foregroundColor(.white)
                     }
                     .font(.system(size: 40, weight: .bold))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 40)
+                    .padding(.leading, 100)
                     VStack{
-                        Text("FUTURO MÁS\nSUSTENTABLE")
+                        Text("FUTURO MÁS")
                             .foregroundColor(.white)
                             .font(.system(size: 40, weight: .bold))
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, 40)
+                            .padding(.leading, 100)
                     }
-                    Spacer()
-                    Spacer()
+                    VStack{
+                        Text("SUSTENTABLE")
+                            .foregroundColor(.white)
+                            .font(.system(size: 40, weight: .bold))
+                            .frame(maxWidth: .infinity, alignment: .center)
+                            .padding(.bottom)
+                    }
                     Spacer()
                     NavigationLink(destination: BarcodeView()){
                         Text("EMPIEZA AHORA")
-                            .font(.headline)
+                            .font(.custom("Roboto-Bold",size: 26))
                             .foregroundColor(.white)
                             .padding()
                             .background(Color("navLink"))
@@ -47,11 +52,14 @@ struct StartView: View {
                             .navigationBarBackButtonHidden(true)
                             
                     }
-                    .padding(.leading, -100)
-                    .frame(width: 250)
-                    .padding(.bottom, 200)
-                    Spacer()
-                    Spacer()
+                    .padding()
+                    .frame(width: 400,alignment: .center)
+                    .padding(.bottom, 50)
+                    
+                    LottieView(url: Bundle.main.url(forResource: "hands", withExtension: "lottie")!)
+                        .frame(width: 450, height: 250, alignment: .center)
+                        .padding(.bottom, 50)
+                    
                 }
             }
         }

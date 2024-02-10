@@ -5,6 +5,9 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Manjari-Regular.ttf</string>
+		<string>Roboto-Bold</string>
+		<string>Roboto-Medium</string>
+		<string></string>
 	</array>
 </dict>
 </plist>

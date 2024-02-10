@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D029BFB2B77055D000C0BB4 /* Manjari-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D029BFA2B77055D000C0BB4 /* Manjari-Bold.ttf */; };
 		9D0DD6D12B7560FD00EFEC35 /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0DD6D02B7560FD00EFEC35 /* BarcodeView.swift */; };
 		9D0DD6D42B75A2DA00EFEC35 /* Manjari-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D0DD6D32B75A2DA00EFEC35 /* Manjari-Regular.ttf */; };
 		9D0DD6D82B75D1F400EFEC35 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0DD6D72B75D1F400EFEC35 /* Lottie */; };
@@ -14,6 +15,9 @@
 		9D1258132B7479FF00664FD2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1258122B7479FF00664FD2 /* GoogleSignInSwift */; };
 		9D1258162B747A6600664FD2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9D1258152B747A6600664FD2 /* FirebaseAuth */; };
 		9D6E6DEE2B769F0D001D290C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6E6DED2B769F0D001D290C /* LoginView.swift */; };
+		9D6E6E292B76E80E001D290C /* hands.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 9D6E6E282B76E80E001D290C /* hands.lottie */; };
+		9D6E6E2B2B76EFB6001D290C /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D6E6E2A2B76EFB6001D290C /* Roboto-Bold.ttf */; };
+		9D6E6E2F2B76EFFD001D290C /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D6E6E2E2B76EFFD001D290C /* Roboto-Medium.ttf */; };
 		9D83D1662B7162820074743F /* HackInternoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83D1652B7162820074743F /* HackInternoApp.swift */; };
 		9D83D16A2B7162840074743F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D83D1692B7162840074743F /* Assets.xcassets */; };
 		9D83D16E2B7162840074743F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D83D16D2B7162840074743F /* Preview Assets.xcassets */; };
@@ -44,10 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D029BFA2B77055D000C0BB4 /* Manjari-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manjari-Bold.ttf"; sourceTree = "<group>"; };
 		9D0DD6D02B7560FD00EFEC35 /* BarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
 		9D0DD6D32B75A2DA00EFEC35 /* Manjari-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manjari-Regular.ttf"; sourceTree = "<group>"; };
 		9D0DD6D52B75A30100EFEC35 /* EcoScan-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "EcoScan-Info.plist"; sourceTree = "<group>"; };
 		9D6E6DED2B769F0D001D290C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9D6E6E282B76E80E001D290C /* hands.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = hands.lottie; sourceTree = "<group>"; };
+		9D6E6E2A2B76EFB6001D290C /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		9D6E6E2E2B76EFFD001D290C /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		9D83D1622B7162820074743F /* EcoScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D83D1652B7162820074743F /* HackInternoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackInternoApp.swift; sourceTree = "<group>"; };
 		9D83D1692B7162840074743F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +104,9 @@
 		9D0DD6D22B75A29B00EFEC35 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				9D029BFA2B77055D000C0BB4 /* Manjari-Bold.ttf */,
+				9D6E6E2E2B76EFFD001D290C /* Roboto-Medium.ttf */,
+				9D6E6E2A2B76EFB6001D290C /* Roboto-Bold.ttf */,
 				9D0DD6D32B75A2DA00EFEC35 /* Manjari-Regular.ttf */,
 			);
 			path = Font;
@@ -129,6 +140,7 @@
 				9D83D1652B7162820074743F /* HackInternoApp.swift */,
 				9DA305882B75E56E0075EDA9 /* Barcode.json */,
 				9D83D1692B7162840074743F /* Assets.xcassets */,
+				9D6E6E282B76E80E001D290C /* hands.lottie */,
 				9DA305912B7687090075EDA9 /* barcode.lottie */,
 				9D6E6DED2B769F0D001D290C /* LoginView.swift */,
 				9D83D1902B7163B00074743F /* StartView.swift */,
@@ -280,11 +292,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6E6E2F2B76EFFD001D290C /* Roboto-Medium.ttf in Resources */,
+				9D6E6E2B2B76EFB6001D290C /* Roboto-Bold.ttf in Resources */,
 				9DA305922B7687090075EDA9 /* barcode.lottie in Resources */,
+				9D029BFB2B77055D000C0BB4 /* Manjari-Bold.ttf in Resources */,
 				9DA305892B75E56E0075EDA9 /* Barcode.json in Resources */,
 				9D83D16E2B7162840074743F /* Preview Assets.xcassets in Resources */,
 				9D0DD6D42B75A2DA00EFEC35 /* Manjari-Regular.ttf in Resources */,
 				9D83D16A2B7162840074743F /* Assets.xcassets in Resources */,
+				9D6E6E292B76E80E001D290C /* hands.lottie in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
