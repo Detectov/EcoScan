@@ -73,14 +73,6 @@ struct BarcodeView: View {
                     }
                     .padding(.bottom, 24)
                     
-                    //Button(<#LocalizedStringKey#>, action:{
-                        //if self.currentStep < onBoardingSteps.count - 1{
-                          //  self.currentStep += 1
-                        //} else {
-                          //  print("u")
-                            //NavigationLink(destination: LoginView())
-                        //}
-                    //})
                     
                     VStack{
                         HStack{
@@ -88,7 +80,7 @@ struct BarcodeView: View {
                                 self.currentStep = onBoardingSteps.count - 1
                                   
                             }){
-                                Text("Skip")
+                                Text("Inicio de Sesión")
                                     .padding(.bottom, 20)
                                     .frame(maxWidth: .infinity, alignment: .center)
                                     .foregroundColor(.white)

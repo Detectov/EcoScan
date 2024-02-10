@@ -11,7 +11,11 @@ import SwiftUI
 struct HackInternoApp: App {
     var body: some Scene {
         WindowGroup {
-            StartView()
+            LoginView()
+            
+                .fullScreenCover(isPresented: $){
+                    StartView()
+                }
         }
     }
 }
